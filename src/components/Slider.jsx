@@ -32,7 +32,7 @@ function Slider() {
       <HiChevronRight  className=" hidden md:block text-[45px] absolute right-16 mt-[140px] cursor-pointer" onClick={()=>SliderRight(elementRef.current)}/>
 
       <div className="flex min-w-full overflow-x-auto w-full px-5 md:px-16 py-0 md:py-2  scrollbar-hide scroll-smooth " ref={elementRef}>
-        {movieList.map((items) => (
+        {movieList.map((items,index) => index < 3 && (
           <img
             key={items.id}
             src={`${imageUrl + items.backdrop_path}`}
