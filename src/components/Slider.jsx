@@ -18,11 +18,13 @@ function Slider() {
 
   const elementRef = useRef()
   const screenWith = window.innerWidth
+
+
   const SliderLeft = (element)=>{
-    element.scrollLeft-=screenWith-125
+    element.scrollLeft-=screenWith-116.5
   }
   const SliderRight = (element)=>{
-    element.scrollLeft+=screenWith-125
+    element.scrollLeft+=screenWith-116.5
   }
 
   return (
@@ -32,7 +34,7 @@ function Slider() {
       <HiChevronRight  className=" hidden md:block text-[45px] absolute right-16 mt-[140px] cursor-pointer" onClick={()=>SliderRight(elementRef.current)}/>
 
       <div className="flex min-w-full overflow-x-auto w-full px-5 md:px-16 py-0 md:py-2  scrollbar-hide scroll-smooth " ref={elementRef}>
-        {movieList.map((items,index) => index < 8 && (
+        {movieList.map((items,index) => index < 7 && (
           <img
             key={items.id}
             src={`${imageUrl + items.backdrop_path}`}
