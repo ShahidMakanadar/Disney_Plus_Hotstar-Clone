@@ -1,0 +1,4 @@
+{
+    "auto-rename-tag.activationOnLanguage": [ "*" ],
+    "css.lint.unknownAtRules": "ignore",
+}  
